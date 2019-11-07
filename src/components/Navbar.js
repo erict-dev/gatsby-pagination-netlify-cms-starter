@@ -35,14 +35,14 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar is-transparent is-fixed-top"
         role="navigation"
         aria-label="main-navigation"
       >
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ height: 'auto', maxHeight: 'none', width: '200px', margin: '20px' }} />
+              <img src={logo} alt="Kaldi" style={{ height: 'auto', maxHeight: 'none', width: '80px', margin: '10px' }} />
             </Link>
             {/* Hamburger menu */}
             <div

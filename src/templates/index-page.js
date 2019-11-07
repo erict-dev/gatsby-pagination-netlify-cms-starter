@@ -16,116 +16,45 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-    {/**
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
-    </div> **/}
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-
-                <div className="content"
-                  style={{
-                    boxShadow: 'rgb(115, 214, 79) 0.5rem 0px 0px, rgb(115, 214, 79) -0.5rem 0px 0px',
-                    color: 'white',
-                    lineHeight: 1,
-                    padding: '30px 40px',
-                    marginBottom: '60px'
-                  }}>
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <p className="subtitle">{mainpitch.description}</p>
-                  </div>
-                </div>
-
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Featured Articles
-                  </h3>
-                  <FeaturedArticles />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/articles">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-
-                <br style={{ marginBottom: '50px' }} />
-
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/about">
-                      Learn more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section class="hero is-primary is-fullheight">
+      <div class="hero-body has-text-centered">
+        <div class="container">
+          <h1 class="title">
+            {title}
+          </h1>
+          <h2 class="subtitle">
+            {subheading}
+          </h2>
         </div>
       </div>
     </section>
-  </div>
+
+    <section className="container">
+      <div class="columns">
+        <div class="column">
+          <figure class="image is-3by2">
+            <img src="https://bulma.io/images/placeholders/480x320.png"/>
+            </figure>
+          </div>
+          <div class="column">
+            Second column
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            First column
+          </div>
+          <div class="column">
+            <figure class="image is-3by2">
+              <img src="https://bulma.io/images/placeholders/480x320.png"/>
+            </figure>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
 )
 
 IndexPageTemplate.propTypes = {
